@@ -1,0 +1,16 @@
+table {
+    th > input[type="checkbox"],
+    td > input[type="checkbox"] { vertical-align: middle; }
+}
+
+.tab-content .table-striped {
+    border-left: none;
+    border-right: none;
+    thead th { border-top: none; }
+}
+
+.table-bulk-actions {
+    display: inline-block;
+    overflow: hidden;
+    padding: 2px 8px 5px 0;
+}

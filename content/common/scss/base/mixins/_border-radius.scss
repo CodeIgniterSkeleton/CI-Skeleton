@@ -1,0 +1,41 @@
+// Border Radius.
+
+@mixin border-radius($radius: 0) {
+    @include prefix(border-radius, $radius, wekbit moz);
+}
+
+@mixin border-top-radius($radius: 0) {
+    @include prefix(border-top-left-radius, $radius, wekbit moz);
+    @include prefix(border-top-right-radius, $radius, wekbit moz);
+}
+
+@mixin border-right-radius($radius: 0) {
+    @include prefix(border-top-right-radius, $radius, wekbit moz);
+    @include prefix(border-bottom-right-radius, $radius, wekbit moz);
+}
+
+@mixin border-bottom-radius($radius: 0) {
+    @include prefix(border-bottom-right-radius, $radius, wekbit moz);
+    @include prefix(border-bottom-left-radius, $radius, wekbit moz);
+}
+
+@mixin border-left-radius($radius: 0) {
+    @include prefix(border-top-left-radius, $radius, wekbit moz);
+    @include prefix(border-bottom-left-radius, $radius, wekbit moz);
+}
+
+@mixin border-top-left-radius($radius: 0) {
+    @include prefix(border-top-left-radius, $radius, wekbit moz);
+}
+
+@mixin border-top-right-radius($radius: 0) {
+    @include prefix(border-top-right-radius, $radius, wekbit moz);
+}
+
+@mixin border-bottom-right-radius($radius: 0) {
+    @include prefix(border-bottom-right-radius, $radius, wekbit moz);
+}
+
+@mixin border-bottom-right-radius($radius: 0) {
+    @include prefix(border-bottom-right-radius, $radius, wekbit moz);
+}

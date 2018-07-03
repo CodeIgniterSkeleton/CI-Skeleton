@@ -1,0 +1,110 @@
+// --------------------------------------------------------------
+// Typography
+// --------------------------------------------------------------
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: $font__base;
+}
+
+// --------------------------------------------------------------
+// Headings
+// --------------------------------------------------------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font__ruda;
+    font-weight: 400;
+    line-height: 18px;
+    @include rtl { font-family: $font__droid; }
+}
+
+h1 { font-size: 23px; line-height: 29px; }
+h2 { font-size: 23px; line-height: 29px; }
+h3 { font-size: 17px; }
+h4 { font-size: 13px; }
+h5 { font-size: 11px; }
+h6 { font-size: 9px; }
+
+// --------------------------------------------------------------
+// Copy.
+// --------------------------------------------------------------
+p { margin: 0; }
+p + p { margin-top: $gutters; }
+
+// --------------------------------------------------------------
+// Elements.
+// --------------------------------------------------------------
+html { @include box-sizing(border-box); }
+
+// Fallback for when there is no custom background color defined.
+body { background: $color__background-body; }
+
+// Make embed elements take 100% of parent's width.
+embed,
+object,
+iframe { max-width: 100%; }
+
+// Make images responsive by default.
+img {
+    @include transition(opacity 0.3s ease-in);
+    @include opacity(1);
+    height: auto;
+    max-width: 100%;
+
+    // Added Laziness when loading images.
+    &[data-src] { @include opacity(0); }
+}
+
+// --------------------------------------------------------------
+// Base styling.
+// --------------------------------------------------------------
+html { width: 100vw; }
+html,
+body { height: 100%; }
+body {
+    @include font-size($font__size);
+    @include line-height($font__line-height-body);
+    background-color: $color__background-body;
+    color: $color__text-main;
+    font-family: $font__base;
+    padding-top: $navbar__height;
+    position: relative;
+
+    @include rtl { font-family: $font__droid; }
+}
+
+.form-control,
+.btn,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+select.form-control:not([size]):not([multiple]) { height: auto; }
+
+// Make pagination centered.
+.pagination { display: inline-flex; }
+
+.alert-dismissible .close {
+    font-size: 1.2rem;
+    outline: 0;
+    padding: 0.25rem 0.5rem;
+}
+
+.badge {padding: 0.1875rem 0.4rem;}
+
+.fa {
+    @include rtl {
+        @include transform(scale(-1, 1));
+    }
+}
